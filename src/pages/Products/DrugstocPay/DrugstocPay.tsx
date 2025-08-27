@@ -1,8 +1,5 @@
 import Card1 from "../../../components/Card1"
-import Card2 from "../../../components/Card2"
-import { Header } from "../../../components/Header"
 import CustomButton1 from "../../../components/button/CustomButton1"
-import ExperienceDSApp from "../../../components/ui/ExperienceDSApp"
 import HeroSection from "../components/HeroSection"
 
 
