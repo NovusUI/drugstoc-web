@@ -24,7 +24,7 @@ const variantMap: Record<ParagraphVariant, string> = {
   tiny: "text-xs leading-snug text-gray-600",
 };
 
-export const Paragraph: React.FC<ParagraphProps> = ({
+ const Paragraph: React.FC<ParagraphProps> = ({
   variant = "body",
   children,
   className,
@@ -35,3 +35,6 @@ export const Paragraph: React.FC<ParagraphProps> = ({
     </p>
   );
 };
+
+
+export default Paragraph

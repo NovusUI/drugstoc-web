@@ -29,7 +29,7 @@ const variantMap: Record<
   tiny:       { tag: "h6", styles: "text-base font-medium" },
 };
 
-export const Header: React.FC<HeaderProps> = ({
+ const Header: React.FC<HeaderProps> = ({
   variant = "title",
   children,
   className,
@@ -38,3 +38,5 @@ export const Header: React.FC<HeaderProps> = ({
 
   return <Tag className={clsx(styles, className)}>{children}</Tag>;
 };
+
+export default Header

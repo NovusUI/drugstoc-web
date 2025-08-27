@@ -32,7 +32,7 @@ export default function GlobalPartners() {
           
           // Reset position instantly
           controls.set({ x: "0%" });
-        } catch (error) {
+        } catch {
           // Animation was cancelled, exit loop
           break;
         }
