@@ -1,40 +1,45 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React from "react";
-import clsx from "clsx";
 
-// Variants you define for your design system
-type HeaderVariant =
-  | "title"     // maps to h1
-  | "subtitle"  // maps to h2
-  | "section"   // maps to h3
-  | "subsection"// maps to h4
-  | "small"     // maps to h5
-  | "tiny";     // maps to h6
-
-interface HeaderProps {
-  variant?: HeaderVariant;
-  children: React.ReactNode;
-  className?: string;
-}
-
-// Map your variants to a semantic tag + styles
-const variantMap: Record<
-  HeaderVariant,
-  { tag: keyof JSX.IntrinsicElements; styles: string }
-> = {
-  title:      { tag: "h1", styles: "text-2zl lg:text-4xl xl:text-5xl font-medium" },
-  subtitle:   { tag: "h2", styles: "text-3xl font-medium" },
-  section:    { tag: "h3", styles: "text-2xl font-medium" },
-  subsection: { tag: "h4", styles: "text-xl font-medium" },
-  small:      { tag: "h5", styles: "text-lg font-medium" },
-  tiny:       { tag: "h6", styles: "text-base font-medium" },
+// Define header sizes (mapping your design system)
+export const headerSizes = {
+  title: "tracking-[0rem] text-[3rem] font-medium not-italic md:text-[2.75rem] sm:text-[2rem]", // h1
+  subtitle: "tracking-[0rem] text-[2.25rem] font-medium not-italic sm:text-[1.75rem]", // h2
+  section: "tracking-[0rem] text-[2rem] font-medium not-italic sm:text-[1.5rem]", // h3
+  subsection: "tracking-[0rem] text-[1.5rem] font-medium not-italic sm:text-[1.25rem]", // h4
+  small: "tracking-[0rem] text-[1.25rem] font-medium not-italic sm:text-[1.125rem]", // h5
+  tiny: "tracking-[0rem] text-[1rem] font-medium not-italic sm:text-[0.875rem]", // h6
 };
 
-export const Header: React.FC<HeaderProps> = ({
-  variant = "title",
-  children,
-  className,
-}) => {
-  const { tag: Tag, styles } = variantMap[variant];
+export type HeaderVariant = keyof typeof headerSizes;
 
-  return <Tag className={clsx(styles, className)}>{children}</Tag>;
-};
+export type HeaderProps = Partial<{
+  className: string;
+  color: string;
+  as: any; // Optional override for semantic element
+  variant: HeaderVariant;
+}> &
+  React.DetailedHTMLProps<React.HTMLAttributes<HTMLHeadingElement>, HTMLHeadingElement>;
+
+const Header = React.forwardRef<HTMLElement, React.PropsWithChildren<HeaderProps>>(
+  (
+    { children, className = "", color = "text-gray-900", as, variant = "title", ...restProps },
+    ref
+  ) => {
+    const Component = as || "h1";
+
+    return (
+      <Component
+        ref={ref}
+        className={`${color} font-montserrat ${className} ${headerSizes[variant]}`}
+        {...restProps}
+      >
+        {children}
+      </Component>
+    );
+  }
+);
+
+Header.displayName = "Header";
+
+export { Header };

@@ -12,7 +12,7 @@ const Career = () => {
       <div className="relative w-screen h-[900px] mt-24 bg-[#0B1532] flex justify-between px-10 md:px-20 overflow-hidden">
         {/* Left side - Text */}
         <div className="text-white space-y-10 md:w-1/2 mt-40 absolute md:static z-10">
-          <Header>Transform Healthcare. Grow With Us.</Header>
+          <Header className="text-white">Transform Healthcare. Grow With Us.</Header>
           <Paragraph className="!text-[#F9F9FB]">
             As we continue to scale across geographies,
             we are looking for exceptional people with bold ideas, strong values,
