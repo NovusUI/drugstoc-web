@@ -46,7 +46,7 @@ const Pillometer = () => {
         buttons={buttons}
         
         />
-       <div className="flex flex-col lg:flex-row lg:items-start  justify-between p-5 sm:p-10 lg:px-28 lg:pt-28   rounded-t-[40px] md:rounded-t-[70px] bg-white relative -top-24 md:-top-48 gap-10">
+       <div className="flex flex-col lg:flex-row lg:items-start  justify-between px-5 pt-5 sm:px-10 sm:pt-10  lg:px-28 lg:pt-28   rounded-t-[40px] md:rounded-t-[70px] bg-white relative -top-24 md:-top-48 gap-10">
             <Card1 
                 header="Efficient Pharmacy Operations in One Solution:"
                 list={[
@@ -60,7 +60,7 @@ const Pillometer = () => {
                 listClass="space-y-5"
                 className=" lg:w-1/2"
                 />
-                <img className=" lg:w-1/2" src="/products/pillometer1.png"/>
+                <img  loading='lazy' className=" lg:w-1/2" src="/products/pillometer1.png"/>
        </div>
        <div className="p-5 sm:p-10  lg:p-28 bg-[#F9F9FB] lg:flex justify-between items-center space-y-10">
               <div className="space-y-5">
@@ -80,18 +80,18 @@ const Pillometer = () => {
                 <div className="md:flex space-x-10 w-full justify-center ">
                     <div className=" space-y-10 flex flex-col items-center justify-center w-full md:w-fit">
                         <div className="bg-white rounded-2xl w-[250px] h-[250px] xl:w-[300px] xl:h-[300px] p-10">
-                            <img src="/products/pillometer2.png"></img>
+                            <img  loading='lazy' src="/products/pillometer2.png"></img>
                         </div>
                         <div className="bg-white rounded-2xl w-[250px] h-[250px] xl:w-[300px] xl:h-[300px] p-10">
-                            <img src="/products/pillometer3.png"></img>
+                            <img  loading='lazy' src="/products/pillometer3.png"></img>
                         </div>
                     </div>
                     <div className=" space-y-10 mt-10 md:mt-20 flex flex-col items-center justify-center w-full md:w-fit">
                         <div className="bg-white rounded-2xl w-[250px] h-[250px] xl:w-[300px] xl:h-[300px] p-10">
-                        <img src="/products/pillometer4.png"></img>
+                        <img  loading='lazy' src="/products/pillometer4.png"></img>
                         </div>
                         <div className="bg-white rounded-2xl w-[250px] h-[250px] xl:w-[300px] xl:h-[300px] p-10">
-                            <img src="/products/pillometer5.png"></img>
+                            <img  loading='lazy' src="/products/pillometer5.png"></img>
                         </div>
                     </div>
                 </div>
@@ -120,11 +120,11 @@ const Pillometer = () => {
                 </div>
 
             </div>
-            <img className="sm:w-1/2 relative -bottom-5 sm:-bottom-10" src="/dora.png"/>
+            <img   loading='lazy'className="sm:w-1/2 relative -bottom-5 sm:-bottom-10" src="/dora.png"/>
         </div>
         <div className="px-5 sm:px-10 lg:px-20 xl:px-36 py-20">
             <div className="sm:flex justify-between items-center p-5 rounded-lg bg-[#F9F9FB]">
-                <img src="/products/pillometer6.png" className="sm:w-1/2 rounded-lg"/>
+                <img   loading='lazy' src="/products/pillometer6.png" className="sm:w-1/2 rounded-lg"/>
                 <div className="space-y-5 sm:w-1/2 p-5 sm:p-10 xl:p-20">
                     <Header>Ready to Transform Your Pharmacy?</Header>
                     <Paragraph>Get pillometer today</Paragraph>

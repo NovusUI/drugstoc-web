@@ -1,3 +1,4 @@
+import { Header } from "../../../components/Header";
 
 
 interface Award {
@@ -16,9 +17,9 @@ const awards: Award[] = [
 export default function HonorsAwards() {
   return (
     <section className="bg-[#0b2d1b] py-24 flex flex-col items-center">
-      <h2 className="text-center text-white text-2xl font-semibold mb-24">
-        Honors & Awards
-      </h2>
+
+      <Header variant="subtitle" color="text-white" className="mb-24"> Honors & Awards</Header>
+   
 
       <div className="flex flex-wrap justify-center gap-16 px-4 lg:max-w-2/3" >
         {awards.map((award, index) => (
@@ -27,6 +28,7 @@ export default function HonorsAwards() {
               src={award.src}
               alt={award.alt}
               className="w-48 h-auto object-contain"
+              loading="lazy"
             />
           </div>
         ))}

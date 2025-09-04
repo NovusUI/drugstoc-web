@@ -9,7 +9,7 @@ interface Props {
 
 const CustomButton1 = ({className,title,onClick}:Props) => {
   return (
-    <button className={`w-40 lg:w-56 p-3 lg:p-5 text-white rounded-lg ${className}`} onClick={onClick}>
+    <button className={`w-40 lg:w-56 p-3 lg:p-5 text-white rounded-lg ${className} hover:shadow-2xl`} onClick={onClick}>
         {title}
     </button>
   )

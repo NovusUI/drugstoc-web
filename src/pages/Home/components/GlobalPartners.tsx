@@ -1,5 +1,6 @@
 import { motion, useAnimationControls } from "framer-motion";
 import { useEffect, useRef } from "react";
+import { Header } from "../../../components/Header";
 
 const partners = [
   { src: "/partners/partner1.png", alt: "partner1" },
@@ -50,9 +51,8 @@ export default function GlobalPartners() {
   return (
     <section className="w-full overflow-hidden py-20 bg-gray-50">
       <div className="container mx-auto px-4">
-        <h2 className="text-center text-3xl font-bold mb-12 text-gray-800">
-          Our Global Partners
-        </h2>
+        <Header className="text-center mb-12" variant="subtitle">Our Global Partners</Header>
+  
         <div className="relative">
           {/* Gradient overlays for fade effect */}
           <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-gray-50 to-transparent z-10 pointer-events-none" />
@@ -74,6 +74,7 @@ export default function GlobalPartners() {
                     src={partner.src}
                     alt={partner.alt}
                     className="h-12 w-auto object-contain"
+                    loading="lazy"
                   />
                 </div>
               ))}
@@ -87,6 +88,7 @@ export default function GlobalPartners() {
                     src={partner.src}
                     alt={partner.alt}
                     className="h-12 w-auto object-contain"
+                    loading="lazy"
                   />
                 </div>
               ))}

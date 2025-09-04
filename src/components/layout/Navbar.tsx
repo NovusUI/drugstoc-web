@@ -9,12 +9,12 @@ const Navbar: React.FC = () => {
   
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-white/60 shadow-sm backdrop-blur py-5">
-      <div className="mx-auto px-4 lg:px-24 py-5 flex items-center justify-between">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-white/60 shadow-sm backdrop-blur md:py-5">
+      <div className="mx-auto px-4 lg:px-20 py-5 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center space-x-10">
           <a href="/">
-            <img src="/DSlogo.png" alt="DrugStoc" className="h-10" />
+            <img src="/DSlogo.png" alt="DrugStoc" className="md:h-10" loading="lazy" />
           </a>
           
         </div>
@@ -33,7 +33,7 @@ const Navbar: React.FC = () => {
 
             {isProductsOpen && (
               <div className="absolute mt-2 w-40 bg-white shadow-lg rounded-md p-2 z-50">
-                {["Medina", "Pillometer", "Thegoodpill", "Blueshield", "Drugstoc pay"].map(
+                {["DrugStoc E-commerce", "Pillometer",  "Drugstoc pay"].map(
                   (item) => (
                     <a
                       key={item}
@@ -80,7 +80,7 @@ const Navbar: React.FC = () => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="lg:hidden px-4 pb-4 space-y-3 bg-white/90 backdrop-blur shadow-lg relative z-40">
+        <div className="lg:hidden px-4 pb-4 py-5 space-y-3 bg-white/90 backdrop-blur shadow-lg relative z-40">
           <div className="relative">
             <button
               onClick={() => setIsProductsOpen(!isProductsOpen)}
@@ -92,7 +92,7 @@ const Navbar: React.FC = () => {
 
             {isProductsOpen && (
               <div className="absolute left-0 mt-2 w-full bg-white shadow-lg rounded-md p-2 z-50">
-                {["Medina", "Pillometer", "Thegoodpill", "Blueshield", "Drugstoc pay"].map(
+                {["DrugStoc E-commerce", "Pillometer",  "Drugstoc pay"].map(
                   (item) => (
                     <a
                       key={item}

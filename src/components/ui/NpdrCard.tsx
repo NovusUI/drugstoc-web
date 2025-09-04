@@ -1,5 +1,6 @@
 // src/components/NdprCard.tsx
 import React from "react";
+import { Header } from "../Header";
 
 const NdprCard: React.FC = () => {
   return (
@@ -11,10 +12,9 @@ const NdprCard: React.FC = () => {
     >
       {/* Left text */}
       <div className="text-center md:text-left">
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light">DrugStoc is</h2>
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mt-2">
-          NDPR AUDIT <br /> COMPLIANT 2024
-        </h1>
+        <Header color="white" >DrugStoc is</Header>
+        <Header color="white" variant="supertitle">NDPR AUDIT <br /> COMPLIANT 2024</Header>
+       
       </div>
 
       {/* Right side */}
@@ -23,11 +23,13 @@ const NdprCard: React.FC = () => {
           src="/qrcode.png"
           alt="NDPR QR Code"
           className="bg-white p-2 rounded-md w-24 h-24 md:w-64 md:h-64"
+          loading="lazy"
         />
         <img 
           src="/ng_data_protection.png" 
           alt="NDPR Badge" 
           className="w-28 h-28 sm:w-40 sm:h-40" 
+          loading="lazy"
         />
       </div>
     </div>

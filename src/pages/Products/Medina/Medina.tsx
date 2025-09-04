@@ -26,7 +26,7 @@ const Medina = () => {
     <>
         <div className="mt-24">
         <HeroSection 
-        header="Medina" 
+        header="DrugStoc E-Commerce" 
         subheader="Procurement Solutions Designed Specifically 
         for Those Who Dedicate Their Lives to Saving Others"
         background="bg-[url('/products/medina.svg')]"
@@ -34,7 +34,7 @@ const Medina = () => {
         backgroundColor="bg-[#63BD78]/70"
         buttons={buttons}
         />
-         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-10 p-5 sm:p-10 lg:px-28 lg:pt-28 rounded-t-[40px] md:rounded-t-[70px] bg-white relative -top-24 md:-top-48">
+         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-10 px-5 pt-5 sm:px-10 sm:pt-10  lg:px-28 lg:pt-28 rounded-t-[40px] md:rounded-t-[70px] bg-white relative -top-24 md:-top-48">
   <Card1
     header="Seamless Ordering, Unlimited Medicine Access"
     para="Medicine sourcing in Africa can be chaotic, but with Medina, healthcare providers in Africa can access essential and life-saving pharmaceuticals at the touch of a button, via mobile and web applications."
@@ -49,11 +49,11 @@ const Medina = () => {
   />
 </div>
 <div className="w-full">
-    <img src="/products/medina0.png"/>
+    <img  loading='lazy' src="/products/medina0.png"/>
 </div>
 <div className="p-5 sm:p-10 lg:px-28 lg:pt-28">
     <Header>What’s in it for you?</Header>
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
+    <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 p-6">
         <Card2 
         className="w-fit"
          img="/products/medina6.jpg" title="Simplified Sourcing" para="Search, Find, Decide. Tap, tap, tap. With a few taps, you can browse, compare, and order quality pharmaceuticals from trusted manufacturers and suppliers."/>

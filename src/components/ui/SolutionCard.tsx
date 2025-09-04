@@ -1,4 +1,6 @@
+import { Link } from "react-router-dom";
 import { Header } from "../Header";
+import { Paragraph } from "../Paragraph";
 
 interface Props {
     wrapperClass: string; // card container styles
@@ -7,6 +9,7 @@ interface Props {
     description: string;
     image: string;
     link: string;
+    headerClass?: string;
   }
   
   const SolutionCard = ({
@@ -16,17 +19,19 @@ interface Props {
     description,
     image,
     link,
+    headerClass,
   }: Props) => {
     return (
       <div className={`${wrapperClass} md:rounded-xl p-10  flex flex-col md:flex-row justify-between items-center w-full text-white space-y-10 `}>
         {/* Text */}
-        <div className="max-w-sm">
-          <Header variant="title" className="mb-5">{title}</Header>
+        <div className="max-w-sm ">
+          <Header variant="title" color={headerClass} className={`mb-5 lg:!text-[2.2rem]`}>{title}</Header>
           {/* <h3 className="text-2xl font-semibold  mb-4"></h3> */}
-          <p className="mb-20">{description}</p>
-          <a href={link} className={`px-10 py-5 text-lg rounded ${btnClass}`}>
+          <Paragraph className="mb-20" color={headerClass}>{description}</Paragraph>
+
+          <Link to={link} className={`px-10 py-5 text-lg rounded-lg ${btnClass} hover:shadow-2xl`}>
             Learn More →
-          </a>
+          </Link>
         </div>
   
         {/* Image */}
@@ -35,6 +40,7 @@ interface Props {
             src={image}
             alt={title}
             className="max-h-80 object-contain "
+            loading="lazy"
           />
         </div>
       </div>

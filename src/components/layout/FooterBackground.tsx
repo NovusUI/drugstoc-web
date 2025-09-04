@@ -33,7 +33,7 @@ const FooterPattern8 =({ className }:Props) =><svg className={className} width="
 
 const FooterBackground = () => {
     return (
-      <div className="w-full flex absolute justify-between overflow-hidden">
+      <div className="w-full flex absolute justify-between overflow-hidden z-0 pointer-events-none">
         {/* Left Side Patterns */}
         <div className="flex flex-col md:flex-row">
           <div className="space-y-1 md:space-y-3">
