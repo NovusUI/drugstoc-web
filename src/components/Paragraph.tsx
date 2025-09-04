@@ -6,7 +6,7 @@ export const paragraphSizes = {
   body: "tracking-[0rem] text-[1rem] font-normal not-italic leading-relaxed text-gray-900",
   lead: "tracking-[0rem] text-[1.25rem] font-normal not-italic leading-relaxed text-gray-900",
   muted: "tracking-[0rem] text-[1rem] font-normal not-italic leading-relaxed text-gray-500",
-  small: "tracking-[0rem] text-[0.875rem] font-normal not-italic leading-snug text-gray-900",
+  small: "tracking-[0rem] text-[0.875rem] md:text-[1.125rem] font-normal not-italic leading-snug text-gray-900",
   tiny: "tracking-[0rem] text-[0.75rem] font-normal not-italic leading-snug text-gray-600",
 };
 

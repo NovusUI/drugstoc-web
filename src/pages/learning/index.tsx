@@ -2,6 +2,9 @@ import Card2 from "../../components/Card2"
 import { Header } from "../../components/Header"
 import { Paragraph } from "../../components/Paragraph"
 import CustomButton1 from "../../components/button/CustomButton1"
+import HeroCard1 from "./components/HeroCard1"
+import HeroCard2 from "./components/HeroCard2"
+import HeroCard3 from "./components/HeroCard3"
 
 
 const cardContent = [
@@ -43,7 +46,7 @@ const Learning = () => {
     <div>
       <div>
         {/* hero section */}
-        <div className="mt-24 w-full  bg-[url('/learning/learning.svg')] bg-cover bg-center bg-no-repeat bg-[#E2F3E6] md:flex justify-between  items-center px-5 sm:px-10 xl:px-20 pt-10 pb-24 md:pb-48 lg:pb-48">
+        <div className="mt-24 w-full  bg-[url('/learning/learning.svg')] bg-cover bg-center bg-no-repeat bg-[#E2F3E6] md:flex justify-between  items-center px-5 sm:px-10 xl:px-20 pt-10 pb-24 md:pb-48 lg:pb-48 overflow-hidden">
 
           <div className="space-y-5 lg:space-y-10 md:w-1/2">
             <Header>Empower Your Healthcare Practice with Cutting Edge Knowledge</Header>
@@ -58,17 +61,20 @@ const Learning = () => {
             </div>
           </div>
            <div className="md:w-1/2 relative h-full ">
-              <img src="/learning/learningHeroImg1.png" className=""></img>
-              <img src="/learning/learningHeroImg2.png" className="absolute"></img>
+              <img src="/learning/learningHeroImg1.png" className="z-20" loading="lazy"></img>
+                <HeroCard1/>
+                <HeroCard2/>
+                <HeroCard3/>
+              {/* <img src="/learning/learningHeroImg2.png" className="absolute"></img>
               <img src="/learning/learningHeroImg3.png" className="absolute top-0"></img>
-              <img src="/learning/learningHeroImg4.png" className="absolute"></img>
+              <img src="/learning/learningHeroImg4.png" className="absolute"></img> */}
            </div>
         </div>
         <div className="p-6 md:p-20 pb-0 rounded-t-[40px] md:rounded-t-[70px] bg-white relative -top-24 md:-top-48  gap-10">
           <Header>Why use DrugStoc learning?</Header>
           <div className="flex flex-wrap justify-center gap-8 px-4  pt-20" >
             {
-              cardContent.map(card=><Card2 para={card.para} img={card.img} title={card.title}/>)
+              cardContent.map(card=><Card2 className="lg:!w-[350px]" para={card.para} img={card.img} title={card.title}/>)
             }
           </div>
         </div>

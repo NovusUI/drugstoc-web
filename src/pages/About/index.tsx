@@ -39,7 +39,7 @@ const AboutUs = () => {
   return (
     <div className="flex flex-col  pb-10">
       <section className="w-screen mt-24">
-        <img className="h-96 md:h-fit w-full object-cover" src="/about/ds_employee.png" alt="ds_employee"></img>
+        <img className="h-96 md:h-fit w-full object-cover" src="/about/ds_employee.jpg" alt="ds_employee"></img>
       </section>
       <section className="p-5 sm:p-10 pt-20 lg:p-20 space-y-20 w-full">
         {

@@ -5,6 +5,7 @@ export default {
           'drugstoc-green-light': '#489D75',
           'drugstoc-green-dark': '#1C5136',
         },
+        fontFamily: { lato: 'Lato', outfit: 'Outfit', inter: 'Inter' },
       },
     },
   };

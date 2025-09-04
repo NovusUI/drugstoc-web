@@ -63,7 +63,7 @@ const Career = () => {
         </div>
 
         <div className="w-full md:w-1/2 flex justify-center">
-          <img src="/career/career4.png" className="rounded-lg" />
+          <img src="/career/career4.jpg" className="rounded-lg" />
         </div>
       </div>
 
@@ -125,7 +125,7 @@ const Career = () => {
   <div className="w-full md:w-1/2 flex justify-center mt-10 md:mt-0">
     <PillShapedComponent 
       className="rotate-[27.3deg] w-[80%] md:w-[562px] md:h-[1096px]" 
-      img="/career/career5.png" 
+      img="/career/career5.jpg" 
     />
   </div>
 </div>

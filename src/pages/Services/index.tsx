@@ -1,4 +1,6 @@
 import Card1 from "../../components/Card1"
+import { Header } from "../../components/Header"
+import { Paragraph } from "../../components/Paragraph"
 
 
 const Services = () => {
@@ -76,17 +78,20 @@ const Services = () => {
     <div className="flex flex-col space-y-20  md:space-y-40 md:px-10 lg:px-20 pb-10 pt-36">
       <div className="p-4 md:p-8 flex flex-col w-full bg-[#E8E7EE] space-y-10 sm:space-y-20 md:rounded-xl">
         <div className="w-full rounded-3xl">
-            <img src="/servicepage/servicesimg1.png" className="rounded-xl w-full"></img>
+            <img  loading='lazy' src="/servicepage/servicesimg1.jpg" className="rounded-xl w-full"></img>
         </div>
         <div className=" lg:w-2/3">
-            <h1 className="uppercase text-lg sm:text-3xl lg:text-5xl mb-5">market insight</h1>
-            <h2 className="text-lg sm:text-2xl lg:text-4xl ">Data-Driven Market Intelligence for the Global Pharmaceutical Ecosystem</h2>
-            <p className="mt-5 text-sm sm:text-xl text-[#514F6D80]">We work with mission-aligned organizations ranging from
+            <Header className="uppercase mb-5">market insight</Header>
+            <Header variant="subtitle" className="text-lg sm:text-2xl lg:text-4xl ">Data-Driven Market Intelligence for the Global Pharmaceutical Ecosystem</Header>
+
+            <Paragraph className="mt-5 text-sm sm:text-xl " color="!text-[#514F6D80]">
+                We work with mission-aligned organizations ranging from
                  multinational pharmaceutical manufacturers to global 
                  health investors and development partners. Through these 
                  partnerships we fulfil our promise of ensuring access to 
                  quality healthcare across Africa.
-            </p>
+            </Paragraph>
+          
         </div>
         <div className="flex  flex-col md:flex-row space-x-5 lg:w-4/5 space-y-10 md:space-y-0">
             {
@@ -107,19 +112,23 @@ const Services = () => {
      {/* section2 */}
       <div className="p-4 md:p-8 flex flex-col w-full bg-[#E8E7EE] space-y-10 sm:space-y-20 md:rounded-xl">
         <div className="w-full rounded-3xl">
-            <img src="/servicepage/servicesimg2.png" className="rounded-xl w-full"></img>
+            <img  loading='lazy' src="/servicepage/servicesimg2.jpg" className="rounded-xl w-full"></img>
         </div>
         <div className=" lg:w-2/3">
-            <h1 className="uppercase text-lg sm:text-3xl lg:text-5xl mb-5">market access solution:</h1>
-            <h2 className="text-lg sm:text-2xl lg:text-4xl ">Seamlessly Connecting Healthcare Products to High-Potential Markets</h2>
-            <p className="mt-5 text-sm sm:text-xl text-[#514F6D80]">
+            <Header  className="uppercase text-lg sm:text-3xl lg:text-5xl mb-5"> 
+               market access solution:
+            </Header>
+            <Header variant="subtitle" className="text-lg sm:text-2xl lg:text-4xl ">
+                Seamlessly Connecting Healthcare Products to High-Potential Markets
+            </Header>
+            <Paragraph className="mt-5 text-sm sm:text-xl text-[#514F6D80]">
                 Navigating entry into Africa’s fast-growing healthcare 
                 landscape? Or expanding into other emerging markets worldwide?
                  At DrugStoc, we bridge the gap between global pharmaceutical 
                  manufacturers and underserved healthcare systems through 
                  a next-generation market access strategy that prioritizes precision, 
                  compliance, and performance.
-            </p>
+            </Paragraph>
         </div>
         <div className="flex  flex-col md:flex-row space-x-5 lg:w-4/5 space-y-10 md:space-y-0">
             {
@@ -131,7 +140,7 @@ const Services = () => {
         </div>
         <div className="flex md:flex-row flex-col items-center md:space-x-5 gap-10 lg:w-4/5">
             <Card1 header={cardData4.header} para={cardData4.para} className="w-full md:w-1/2 bg-white py-10"/>
-            <p className="text-[#5EBD75] text-xl sm:text-2xl md:w-1/2">Ready to enter or scale in high-growth markets? Reach out to us at insights@drugstoc.com to begin your journey.</p>
+            <Paragraph className="text-xl sm:text-2xl md:w-1/2" color="!text-[#5EBD75]">Ready to enter or scale in high-growth markets? Reach out to us at insights@drugstoc.com to begin your journey.</Paragraph>
         </div>
         
       </div>
